@@ -4,17 +4,22 @@
 body {
     --color-primary: #FFCC01;
     --color-secondary: #2D6AB3;
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    padding: 0;
 }
 
 h1 {
     font-family: "Jersey 15", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-p {
-    color: var(--color-primary);
-    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
 }

@@ -1,0 +1,46 @@
+.button {
+    --button-decoration-width: 20px;
+    --button-padding-x: 12px;
+    border-radius: 7px;
+    padding: 6px var(--button-padding-x);
+    padding-left: calc(var(--button-padding-x) + var(--button-decoration-width));
+    border: 0;
+    font-size: 14px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+
+    &__decoration {
+        content: "";
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: var(--button-decoration-width);
+        transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        &--before {
+            left: 0;
+            background-color: var(--color-secondary);
+        }
+        &--after {
+            right: 0;
+            background-color: var(--color-primary);
+            width: 0;
+        }
+    }
+
+    &:hover {
+        padding: 6px var(--button-padding-x);
+        padding-right: calc(var(--button-padding-x) + var(--button-decoration-width));
+        .button__decoration {
+            &--before {
+                width: 0px;
+            }
+            &--after {
+                width: var(--button-decoration-width);
+            }
+        }
+    }
+}
