@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import './decoratedCta.scss';
+import './DecoratedCta.scss';
 
 type DecoratedCta = {
     label: string;

@@ -1,16 +1,20 @@
 .button {
     --button-decoration-width: 20px;
     --button-padding-x: 12px;
-    border-radius: 7px;
-    padding: 6px var(--button-padding-x);
-    padding-left: calc(var(--button-padding-x) + var(--button-decoration-width));
     border: 0;
+    border-radius: 7px;
     font-size: 14px;
-    background: #fff;
     position: relative;
     overflow: hidden;
+    padding-left: var(--button-decoration-width);
     transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: pointer;
+
+    &__content {
+        display: block;
+        padding: 6px var(--button-padding-x);
+        background: #fff;
+    }
 
     &__decoration {
         content: "";
@@ -32,8 +36,9 @@
     }
 
     &:hover {
-        padding: 6px var(--button-padding-x);
-        padding-right: calc(var(--button-padding-x) + var(--button-decoration-width));
+        padding-left: 0;
+        padding-right: var(--button-decoration-width);
+
         .button__decoration {
             &--before {
                 width: 0px;
